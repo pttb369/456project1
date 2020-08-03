@@ -99,6 +99,85 @@
       <arg line="-docs ${docs}"/>
     </java>
   </target>
+  
+  <target name="run-TF-demo" description="Run TFindexing demo">
+    <echo>Indexing Html Files</echo>
+    <echo>${toString:classpath}</echo>
+    <java className="org.apache.lucene.demo.TFIDFHtmlIndexFiles">
+      <classpath>
+        <pathelement path="${analyzers-common.jar}"/>
+        <pathelement path="${queryparser.jar}"/>
+        <pathelement path="${lucene-core.jar}"/>
+        <pathelement path="${queries.jar}"/>
+        <pathelement path="${facet.jar}"/>
+        <pathelement path="${expressions.jar}"/>
+        <pathelement path="${benchmark.jar}"/>
+        <fileset dir="../expressions/lib"/>
+        <fileset dir="lib"/>
+        <pathelement path="${demo.jar}"/>
+      </classpath>
+      <arg line="-docs ${docs}"/>
+    </java>
+  </target>
+  
+  <target name="run-TFsearch-demo" description="Run TFsearch demo">
+    <echo>Indexing Html Files</echo>
+    <java className="org.apache.lucene.demo.TFIDFSearchFiles">
+      <classpath>
+        <pathelement path="${analyzers-common.jar}"/>
+        <pathelement path="${queryparser.jar}"/>
+        <pathelement path="${lucene-core.jar}"/>
+        <pathelement path="${queries.jar}"/>
+        <pathelement path="${facet.jar}"/>
+        <pathelement path="${expressions.jar}"/>
+        <pathelement path="${benchmark.jar}"/>
+        <fileset dir="../expressions/lib"/>
+        <fileset dir="lib"/>
+        <pathelement path="${demo.jar}"/>
+      </classpath>
+      <arg line="-docs ${docs}"/>
+    </java>
+  </target>
+  
+  <target name="run-html-demo" description="Run indexing demo">
+    <echo>Indexing Html Files</echo>
+    <echo>${toString:classpath}</echo>
+    <java className="org.apache.lucene.demo.HtmlIndexFiles">
+      <classpath>
+        <pathelement path="${analyzers-common.jar}"/>
+        <pathelement path="${queryparser.jar}"/>
+        <pathelement path="${lucene-core.jar}"/>
+        <pathelement path="${queries.jar}"/>
+        <pathelement path="${facet.jar}"/>
+        <pathelement path="${expressions.jar}"/>
+        <pathelement path="${benchmark.jar}"/>
+        <fileset dir="../expressions/lib"/>
+        <fileset dir="lib"/>
+        <pathelement path="${demo.jar}"/>
+      </classpath>
+      <arg line="-docs ${docs}"/>
+    </java>
+  </target>
+  
+  <target name="run-simple-demo" description="Run simple metrics demo">
+    <echo>Indexing Html Files</echo>
+    <echo>${toString:classpath}</echo>
+    <java className="org.apache.lucene.demo.SimpleMetrics">
+      <classpath>
+        <pathelement path="${analyzers-common.jar}"/>
+        <pathelement path="${queryparser.jar}"/>
+        <pathelement path="${lucene-core.jar}"/>
+        <pathelement path="${queries.jar}"/>
+        <pathelement path="${facet.jar}"/>
+        <pathelement path="${expressions.jar}"/>
+        <pathelement path="${benchmark.jar}"/>
+        <fileset dir="../expressions/lib"/>
+        <fileset dir="lib"/>
+        <pathelement path="${demo.jar}"/>
+      </classpath>
+      <arg line="-docs ${docs}"/>
+    </java>
+  </target>
 
   <target name="run-search-index-demo" description="Search index demo">
     <echo>Search Index</echo>

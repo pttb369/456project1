@@ -16,7 +16,6 @@
  */
 package org.apache.lucene.analysis.standard;
 
-
 import java.io.IOException;
 import java.io.Reader;
 import java.util.Arrays;
